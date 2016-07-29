@@ -55,8 +55,9 @@ listen_addresses = '*'
 wal_level = 'hot_standby'
 archive_mode = on
 archive_command = 'cd .'
-max_wal_senders = 2
+max_wal_senders = 4
 wal_keep_segments=8
+synchronous_standby_names='beta'
 _EOF1_
 "
 

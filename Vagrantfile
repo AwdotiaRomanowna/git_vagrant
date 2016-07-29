@@ -22,5 +22,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     server.vm.provision "shell", path: "scripts/beta.sh", args: PG_DATABASE_NAME
   end
 
+  config.vm.define "gamma" do |server|
+    server.vm.hostname = "gamma.pg"
+    server.vm.network "private_network", ip: "192.168.4.4"
+    server.vm.provision "shell", path: "scripts/gamma.sh"
+  end
+
 end
 
