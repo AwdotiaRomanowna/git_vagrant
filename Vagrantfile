@@ -6,7 +6,7 @@ PG_DATABASE_NAME = "replication"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/trusty64"
 
-  config.ssh.private_key_path = "/home/boria/.ssh/id_rsa"
+# config.ssh.private_key_path = "/home/boria/.ssh/id_rsa"
 
   config.vm.define "alpha", primary: true do |server|
     server.vm.hostname = "alpha.pg"
